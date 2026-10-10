@@ -1,0 +1,39 @@
+.response-status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-interested {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #bbdefb;
+}
+
+.badge-contacted {
+  background-color: #fff8e1;
+  color: #f57f17;
+  border: 1px solid #ffe082;
+}
+
+.badge-confirmed {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.badge-withdrawn {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.badge-default {
+  background-color: #f5f5f5;
+  color: #616161;
+  border: 1px solid #e0e0e0;
+}

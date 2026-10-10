@@ -1,0 +1,271 @@
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 3rem auto;
+
+  padding: 2.5rem;
+
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #eaecf0;
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(16, 24, 40, 0.08),
+    0 4px 12px rgba(16, 24, 40, 0.04);
+
+  backdrop-filter: blur(12px);
+
+  animation: registerCardAppear 0.45s ease-out;
+}
+
+@keyframes registerCardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-card h2 {
+  margin: 0;
+
+  color: #17202a;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+
+  text-align: center;
+}
+
+.register-card .subtitle {
+  margin: 0.65rem 0 2rem;
+
+  color: #667085;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.alert {
+  margin-bottom: 1.5rem;
+  padding: 0.9rem 1rem;
+
+  border-radius: 12px;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 550;
+}
+
+.alert-success {
+  background: #eaf8f1;
+  color: #116b4a;
+  border: 1px solid #c7ead9;
+}
+
+.alert-error {
+  background: #fff1f3;
+  color: #a61b2b;
+  border: 1px solid #ffd5db;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+
+  color: #344054;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  min-height: 50px;
+
+  padding: 0.8rem 0.95rem;
+
+  background: #ffffff;
+  color: #17202a;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+
+  font-size: 0.95rem;
+  outline: none;
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.form-group input::placeholder {
+  color: #98a2b3;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #b8bec8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  background: #ffffff;
+  border-color: #c6283d;
+
+  box-shadow:
+    0 0 0 4px rgba(198, 40, 61, 0.1);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.field-error {
+  margin-top: 0.4rem;
+
+  color: #c6283d;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 550;
+}
+
+.submit-btn {
+  width: 100%;
+  min-height: 52px;
+
+  margin-top: 0.35rem;
+  padding: 0.85rem 1rem;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #c6283d;
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 16px rgba(198, 40, 61, 0.2);
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #9f1f31;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 9px 20px rgba(198, 40, 61, 0.25);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #c8ccd2;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    margin: 1.5rem auto;
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .register-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .register-card .subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* =========================================================
+   PASSWORD VISIBILITY TOGGLE
+   ========================================================= */
+
+.register-password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.register-password-wrapper input {
+  width: 100%;
+  padding-right: 3.4rem;
+}
+
+.register-password-toggle {
+  position: absolute;
+
+  top: 50%;
+  right: 0.75rem;
+
+  transform: translateY(-50%);
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #98a2b3;
+
+  font-size: 0.95rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.register-password-toggle:hover {
+  color: #c6283d;
+  background: #fff0f2;
+}
+
+.register-password-toggle:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.register-password-toggle:focus-visible {
+  outline: 2px solid rgba(198, 40, 61, 0.3);
+  outline-offset: 2px;
+}
